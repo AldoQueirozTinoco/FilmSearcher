@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Greeting</title>
+</head>
+<body>
+<h1>Search for a movie</h1>
+<form action="#" th:action="@{/search}" th:object="${movie}" method="get">
+    <label for="Mname">Movie Name:</label><br>
+    <input type ="text" id="Mname" th:field="*{Title}"><br>
+
+    <button type="submit">Register</button>
+</form>
+</body>
+</html>

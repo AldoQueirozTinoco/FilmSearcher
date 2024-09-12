@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Greeting</title>
+</head>
+
+<body>
+<h1>Movie Information</h1>
+
+<!-- Exibindo os dados do filme em uma ordem específica -->
+<h2><strong>Title:</strong> <span th:text="${movie.title}"></span></h2>
+<p><strong>Year:</strong> <span th:text="${movie.year}"></span></p>
+<p><strong>Released:</strong> <span th:text="${movie.released}"></span></p>
+<p><strong>Runtime:</strong> <span th:text="${movie.runtime}"></span></p>
+<p><strong>Genre:</strong> <span th:text="${movie.genre}"></span></p>
+<p><strong>Director:</strong> <span th:text="${movie.director}"></span></p>
+<p><strong>Writer:</strong> <span th:text="${movie.writer}"></span></p>
+<p><strong>Actors:</strong> <span th:text="${movie.actors}"></span></p>
+<p><strong>Plot:</strong> <span th:text="${movie.plot}"></span></p>
+<p><strong>Language:</strong> <span th:text="${movie.language}"></span></p>
+<p><strong>Country:</strong> <span th:text="${movie.country}"></span></p>
+<p><strong>Awards:</strong> <span th:text="${movie.awards}"></span></p>
+<p><strong>Poster:</strong> <img th:src="${movie.poster}" alt="Movie Poster" /></p>
+
+<!-- Exibindo as avaliações (ratings) em uma ordem definida -->
+<h2>Ratings</h2>
+<ul>
+    <li th:each="rating : ${movie.ratings}">
+        <strong>Source:</strong> <span th:text="${rating.source}"></span>,
+        <strong>Value:</strong> <span th:text="${rating.value}"></span>
+    </li>
+</ul>
+
+<p><strong>Metascore:</strong> <span th:text="${movie.metascore}"></span></p>
+<p><strong>IMDB Rating:</strong> <span th:text="${movie.imdbRating}"></span></p>
+<p><strong>IMDB Votes:</strong> <span th:text="${movie.imdbVotes}"></span></p>
+<p><strong>Type:</strong> <span th:text="${movie.type}"></span></p>
+<p><strong>DVD Release:</strong> <span th:text="${movie.dvd}"></span></p>
+<p><strong>Box Office:</strong> <span th:text="${movie.boxOffice}"></span></p>
+<p><strong>Production:</strong> <span th:text="${movie.production}"></span></p>
+<p><strong>Website:</strong> <span th:text="${movie.website}"></span></p>
+</body>
+
+</html>
